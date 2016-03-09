@@ -47,7 +47,6 @@ class SberbankPaymentSystem extends PaymentSystem
     public function processCheckout(Payment $payment, CHttpRequest $request)
     {
         $orderId = $request->getParam('orderId');
-        echo $orderId;
         $sbank = new Sberbank($payment);
         $order = Order::model()->findByAttributes(['orderId'=>$orderId]);
 
