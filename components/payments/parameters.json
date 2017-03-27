@@ -10,6 +10,10 @@
             "name": "Пароль"
         },
         {
+            "variable": "server",
+            "name": "Сервер для подключения API (https://3dsec.sberbank.ru/payment/rest/)"
+        },
+        {
             "variable": "merchant",
             "name": "Мерчант (адрес оплаты через пластиковые карты)"
         },
