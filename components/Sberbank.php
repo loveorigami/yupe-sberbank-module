@@ -30,8 +30,8 @@ class Sberbank
         $this->userName = $settings['userName'];
         $this->password = $settings['password'];
         $this->returnUrl = $settings['returnUrl'];
+        $this->server = $settings['server'];
         $this->merchant = $settings['merchant'];
-
         $this->sessionTimeoutSecs = $settings['sessionTimeoutSecs'];
         $this->language = $settings['language'];
         $this->failUrl = $settings['failUrl'];
@@ -46,7 +46,7 @@ class Sberbank
      */
     public function getUrl($method)
     {
-        return 'https://3dsec.sberbank.ru/payment/rest/' . $method;
+        return $this->server . $method;
     }
 
     /**
